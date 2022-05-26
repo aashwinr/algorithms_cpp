@@ -1,14 +1,16 @@
 #pragma once
 
-#include <cstdio>
+#include <cstddef>
+#include <cstdint>
 
-using i8 = char;
-using u8 = unsigned char;
-using i16 = short;
-using u16 = unsigned short;
-using i32 = int;
-using u32 = unsigned int;
-using i64 = long;
-using u64 = unsigned long;
-using isize = long long;
+using i8 = int8_t;
+using u8 = uint8_t;
+using byte = u8;
+using i16 = int16_t;
+using u16 = uint16_t;
+using i32 = int32_t;
+using u32 = uint32_t;
+using i64 = int64_t;
+using u64 = uint64_t;
+using isize = ptrdiff_t;
 using usize = size_t;
