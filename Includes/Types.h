@@ -9,6 +9,6 @@ using u16 = unsigned short;
 using i32 = int;
 using u32 = unsigned int;
 using i64 = long;
-using u64 = unsigned long long;
+using u64 = unsigned long;
 using isize = long long;
 using usize = size_t;
