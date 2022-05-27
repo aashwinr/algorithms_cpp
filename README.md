@@ -1,4 +1,4 @@
-# basic_filesystem
+# Algorithms in C++
 A basic filesystem and all the required helper classes.
 
 > ### Compilation Instructions
