@@ -1,14 +1,19 @@
 #include "../Includes/Types.h"
 #include "../Includes/StringAlgorithms.h"
 
+#include <string>
+
 namespace StringAlgorithms {
     using namespace std;
 
     string Substring(const string &str, usize begin, usize end = string::npos) {
         usize str_size = str.size();
         if (end > str_size) end = str_size;
-        // TODO: Implement Substring
-        return string();
+        string substr;
+        for(usize i = begin; i < end; ++i) {
+            substr.push_back(str[i]);
+        }
+        return substr;
     }
 
     vector<string> Split(const string &haystack, const string &needle) {
@@ -22,10 +27,10 @@ namespace StringAlgorithms {
                 // end = npos
                 // => npos = max(usize)
                 // => substr will be the last remaining string
-                wheat.push_back(haystack.substr(begin, end));
+                wheat.push_back(StringAlgorithms::Substring(haystack, begin, end));
                 break;
             }
-            wheat.push_back(haystack.substr(begin, end - begin));
+            wheat.push_back(StringAlgorithms::Substring(haystack, begin, end));
             end += needle.size();
             begin = end;
         }
@@ -48,6 +53,12 @@ namespace StringAlgorithms {
                         + str.substr(0, rot_amount);
             }
         }
+    }
+
+    namespace Search {
+        usize AhoCorasick(const std::string& haystack, const std::string& needle) { return 0; }
+        usize SuffixArrays(const std::string& haystack, const std::string& needle) { return 0; }
+        usize BurrowsWheeler(const std::string& haystack, const std::string& needle) { return 0; }
     }
 
 }
